@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aurea Roleplay | FiveM RP Argentino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurea Roleplay - Servidor FiveM RP serio argentino. Elegancia, realismo y calidad.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-main:#05070d;
+      --bg-card:#0b1020;
+      --primary:#d4af37;
+      --secondary:#9ca3af;
+      --text-soft:#b5b9c4;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:var(--bg-main);color:white}
+    header{
+      position:relative;
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    header video{
+      position:absolute;
+      top:0;left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-2;
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(5,7,13,.6),rgba(5,7,13,.95));
+      z-index:-1;
+    }
+    .hero h1{
+      font-size:4rem;
+      font-weight:600;
+      letter-spacing:1px;
+      margin-bottom:15px;
+    }
+    .hero h1 span{color:var(--primary)}
+    .hero p{
+      color:var(--text-soft);
+      max-width:600px;
+      margin:0 auto 30px;
+    }
+    .buttons a{
+      display:inline-block;
+      padding:14px 32px;
+      margin:0 10px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:500;
+      transition:.3s;
+    }
+    .btn-main{
+      background:var(--primary);
+      color:black;
+    }
+    .btn-main:hover{transform:translateY(-3px)}
+    .btn-sec{
+      border:1px solid var(--primary);
+      color:var(--primary);
+    }
+    .btn-sec:hover{
+      background:var(--primary);
+      color:black;
+    }
+    section{
+      padding:80px 10%;
+      text-align:center;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+    .card{
+      background:var(--bg-card);
+      padding:35px;
+      border-radius:20px;
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-8px)}
+    footer{
+      padding:30px;
+      text-align:center;
+      color:var(--secondary);
+      background:#02040a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-driving-through-los-angeles-at-night-3817/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="hero">
+    <h1><span>Aurea</span> Roleplay</h1>
+    <p>Servidor FiveM RP serio argentino · Elegancia, realismo y calidad</p>
+    <div class="buttons">
+      <a class="btn-main" href="https://cfx.re/join/yg49kj" target="_blank">Conectarse</a>
+      <a class="btn-sec" href="https://discord.gg/AdAd9mbQ" target="_blank">Discord</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>¿Por qué Aurea RP?</h2>
+  <div class="cards">
+    <div class="card">RP serio y realista</div>
+    <div class="card">Staff activo y profesional</div>
+    <div class="card">Normativas claras</div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Aurea Roleplay · FiveM RP Argentino
+</footer>
+
+</body>
+</html>
