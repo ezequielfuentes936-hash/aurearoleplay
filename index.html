@@ -1,132 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Aurea Roleplay | FiveM RP Argentino</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aurea Roleplay - Servidor FiveM RP serio argentino. Elegancia, realismo y calidad.">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg-main:#05070d;
-      --bg-card:#0b1020;
-      --primary:#d4af37;
-      --secondary:#9ca3af;
-      --text-soft:#b5b9c4;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:var(--bg-main);color:white}
-    header{
-      position:relative;
-      height:100vh;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-    }
-    header video{
-      position:absolute;
-      top:0;left:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      z-index:-2;
-    }
-    header::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg,rgba(5,7,13,.6),rgba(5,7,13,.95));
-      z-index:-1;
-    }
-    .hero h1{
-      font-size:4rem;
-      font-weight:600;
-      letter-spacing:1px;
-      margin-bottom:15px;
-    }
-    .hero h1 span{color:var(--primary)}
-    .hero p{
-      color:var(--text-soft);
-      max-width:600px;
-      margin:0 auto 30px;
-    }
-    .buttons a{
-      display:inline-block;
-      padding:14px 32px;
-      margin:0 10px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:500;
-      transition:.3s;
-    }
-    .btn-main{
-      background:var(--primary);
-      color:black;
-    }
-    .btn-main:hover{transform:translateY(-3px)}
-    .btn-sec{
-      border:1px solid var(--primary);
-      color:var(--primary);
-    }
-    .btn-sec:hover{
-      background:var(--primary);
-      color:black;
-    }
-    section{
-      padding:80px 10%;
-      text-align:center;
-    }
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-      margin-top:40px;
-    }
-    .card{
-      background:var(--bg-card);
-      padding:35px;
-      border-radius:20px;
-      transition:.3s;
-    }
-    .card:hover{transform:translateY(-8px)}
-    footer{
-      padding:30px;
-      text-align:center;
-      color:var(--secondary);
-      background:#02040a;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurea Store | FiveM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#7dd3fc;
+  --secondary:#a78bfa;
+  --accent:#34d399;
+  --bg:#0b1020;
+  --bg2:#0a0f1a;
+  --card: rgba(17,24,39,.72);
+  --card2: rgba(15,23,42,.88);
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --glow: 0 0 10px rgba(125,211,252,.2);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+<script src="script.js"></script>
+
+body{
+  font-family:'Roboto',sans-serif;
+  background:linear-gradient(180deg,var(--bg2),var(--bg));
+  color:var(--text);
+  min-height:100vh;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(10,15,26,.75);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  font-family:'Orbitron',sans-serif;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  opacity:.8;
+}
+nav a:hover{opacity:1}
+
+.hero{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero h2{
+  font-family:'Orbitron',sans-serif;
+  font-size:2.6rem;
+  margin-bottom:16px;
+}
+
+.hero p{
+  max-width:720px;
+  margin:0 auto 30px;
+  color:var(--muted);
+}
+
+.btn{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#020617;
+  padding:14px 28px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:var(--glow);
+  display:inline-block;
+}
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 40px;
+}
+
+.section h3{
+  font-family:'Orbitron',sans-serif;
+  text-align:center;
+  margin-bottom:40px;
+  font-size:1.8rem;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border-radius:22px;
+  padding:26px;
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:0 20px 50px rgba(0,0,0,.55);
+  transition:transform .3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.preview{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:18px;
+  background:#000;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.preview video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s ease;
+}
+
+.card:hover .preview video{
+  transform:scale(1.06);
+}
+
+.card h4{
+  font-family:'Orbitron',sans-serif;
+  margin-bottom:8px;
+}
+
+.price{
+  color:var(--primary);
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+.card ul{
+  list-style:none;
+  margin-bottom:20px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.card ul li::before{
+  content:"✔ ";
+  color:var(--accent);
+}
+
+footer{
+  padding:30px;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.coverr.co/videos/coverr-driving-through-los-angeles-at-night-3817/1080p.mp4" type="video/mp4">
-  </video>
-  <div class="hero">
-    <h1><span>Aurea</span> Roleplay</h1>
-    <p>Servidor FiveM RP serio argentino · Elegancia, realismo y calidad</p>
-    <div class="buttons">
-      <a class="btn-main" href="https://cfx.re/join/yg49kj" target="_blank">Conectarse</a>
-      <a class="btn-sec" href="https://discord.gg/AdAd9mbQ" target="_blank">Discord</a>
-    </div>
-  </div>
+  <h1>AUREA STORE</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#discord">Discord</a>
+  </nav>
 </header>
 
-<section>
-  <h2>¿Por qué Aurea RP?</h2>
-  <div class="cards">
-    <div class="card">RP serio y realista</div>
-    <div class="card">Staff activo y profesional</div>
-    <div class="card">Normativas claras</div>
-  </div>
+<section class="hero" id="inicio">
+  <h2>Store Oficial FiveM</h2>
+  <p>Scripts, mapeos y contenido premium para tu servidor de FiveM.</p>
+  <a class="btn" href="#productos">Ver productos</a>
 </section>
 
-<footer>
-  © 2025 Aurea Roleplay · FiveM RP Argentino
+<section class="section" id="productos">
+<h3>Productos Destacados</h3>
+
+<div class="products">
+
+<div class="card">
+
+  <div class="preview">
+    <video muted loop preload="metadata" playsinline>
+      <source src="assets/previews/aurea-rp.webm" type="video/webm">
+      <source src="assets/previews/aurea-rp.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h4>Aurea RP – Identidad Visual</h4>
+  <p class="price">$10 USD</p>
+
+  <ul>
+    <li>Animación gamer profesional</li>
+    <li>Preview con video al hover</li>
+    <li>Optimizado para web</li>
+  </ul>
+
+  <a class="btn" href="#">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<footer id="discord">
+  <p>© 2026 Aurea Store — FiveM</p>
+  <p><a href="https://discord.gg/AdAd9mbQ" target="_blank">Unirse al Discord</a></p>
 </footer>
+
+<script>
+document.querySelectorAll('.preview video').forEach(video=>{
+  const box = video.parentElement;
+
+  box.addEventListener('mouseenter',()=>{
+    video.currentTime=0;
+    video.play();
+  });
+
+  box.addEventListener('mouseleave',()=>{
+    video.pause();
+    video.currentTime=0;
+  });
+
+  box.addEventListener('click',()=>{
+    if(video.paused) video.play();
+    else video.pause();
+  });
+});
+</script>
 
 </body>
 </html>
